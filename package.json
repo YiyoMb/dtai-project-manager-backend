@@ -8,10 +8,19 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "migrate": "node src/database/migrations/migrate.js",
     "seed": "node src/database/seeders/seed.js",
+    "seed:clear": "node src/database/seeders/seed.js clear",
+    "seed:verify": "node src/database/seeders/seed.js verify",
     "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix"
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/",
+    "logs": "tail -f logs/combined.log",
+    "logs:error": "tail -f logs/error.log",
+    "pm2:start": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop dtai-project-manager",
+    "pm2:restart": "pm2 restart dtai-project-manager",
+    "pm2:logs": "pm2 logs dtai-project-manager"
   },
   "keywords": [
     "project-management",
@@ -47,6 +56,7 @@
     "eslint-plugin-node": "^11.1.0",
     "jest": "^30.0.4",
     "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
     "sequelize-cli": "^6.6.3",
     "supertest": "^7.1.1"
   }
