@@ -1,3 +1,170 @@
-node_modules
+# ==============================================
+# DTAI PROJECT MANAGER - GITIGNORE
+# ==============================================
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+# Variables de entorno
 .env
-.env.examples
+.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Archivos de runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory usado por herramientas como istanbul
+coverage/
+*.lcov
+
+# Directorio de instrumentación de nyc
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# Archivos opcionales de npm
+.npm
+
+# Archivos opcionales de ESLint
+.eslintcache
+
+# Archivos opcionales de Microbundle
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Archivos opcionales de REPL
+.node_repl_history
+
+# Salida de 'npm pack'
+*.tgz
+
+# Archivos de integridad de Yarn
+.yarn-integrity
+
+# Archivos de configuración de dotenv
+.env
+.env.test
+
+# Archivos de configuración de parcel-bundler
+.cache
+.parcel-cache
+
+# Archivos de configuración de Next.js
+.next
+
+# Archivos de configuración de Nuxt.js
+.nuxt
+dist
+
+# Archivos de configuración de Gatsby
+.cache/
+public
+
+# Archivos de configuración de Vuepress
+.vuepress/dist
+
+# Archivos de configuración de Serverless
+.serverless/
+
+# Archivos de configuración de FuseBox
+.fusebox/
+
+# Archivos de configuración de DynamoDB local
+.dynamodb/
+
+# Archivos de configuración de TernJS
+.tern-project
+
+# Archivos específicos del proyecto
+uploads/
+temp/
+tmp/
+.tmp/
+
+# Archivos de configuración de editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos de configuración de PM2
+ecosystem.config.js
+pm2.config.js
+
+# Archivos de configuración de Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+
+# Archivos de configuración de Kubernetes
+k8s/
+*.yaml
+*.yml
+
+# Archivos de configuración de Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Archivos de certificados SSL
+*.pem
+*.crt
+*.key
+
+# Archivos de backup de base de datos
+*.sql
+*.dump
+
+# Archivos de configuración de herramientas de desarrollo
+.eslintrc.js
+.prettierrc
+.editorconfig
+
+# Archivos de configuración específicos del entorno
+config/local.json
+config/production.json
+config/test.json
+
+# Archivos temporales de testing
+test-results/
+coverage/
+
+# Archivos de configuración de Storybook
+.storybook/
+storybook-static/
