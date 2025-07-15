@@ -14,6 +14,7 @@ const userRoutes = require('./routes/users');
 const roleRoutes = require('./routes/roles');
 const portfolioRoutes  = require('./routes/portfolios');
 const programRoutes  = require('./routes/programs');
+const projectsRoutes  = require('./routes/projects');
 
 // Crear instancia de Express
 const app = express();
@@ -254,6 +255,7 @@ app.get('/api', (req, res) => {
             roles: '/api/roles',
             portfolios: '/api/portfolios',
             programs: '/api/programs',
+            projects: '/api/projects',
             health: '/health'
         },
         documentation: {
@@ -280,6 +282,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/roles', roleRoutes);
 app.use('/api/portfolios', portfolioRoutes);
 app.use('/api/programs', programRoutes);
+app.use('/api/projects', projectsRoutes);
 
 // Endpoint para verificar que la API está funcionando
 app.get('/ping', (req, res) => {
