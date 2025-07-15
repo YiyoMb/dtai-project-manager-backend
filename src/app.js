@@ -12,6 +12,7 @@ const logger = require('./utils/logger');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const roleRoutes = require('./routes/roles');
+const portfolioRoutes  = require('./routes/portfolios');
 
 // Crear instancia de Express
 const app = express();
@@ -250,6 +251,7 @@ app.get('/api', (req, res) => {
             auth: '/api/auth',
             users: '/api/users',
             roles: '/api/roles',
+            portfolios: '/api/portfolios',
             health: '/health'
         },
         documentation: {
@@ -274,6 +276,7 @@ app.use((req, res, next) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/roles', roleRoutes);
+app.use('/api/portfolios', portfolioRoutes);
 
 // Endpoint para verificar que la API está funcionando
 app.get('/ping', (req, res) => {
@@ -294,6 +297,9 @@ app.use(errorMiddleware);
 app.on('error', (error) => {
     logger.error('❌ Application error:', error);
 });
+
+// en app.js
+console.log('portfolioRoutes:', portfolioRoutes);
 
 // Exportar la aplicación
 module.exports = app;
